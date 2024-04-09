@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Problem</title>
+<title>Ist x^y größer oder kleiner als y^x</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,16 +23,16 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="1_Compare_Term_files/libs/clipboard/clipboard.min.js"></script>
-<script src="1_Compare_Term_files/libs/quarto-html/quarto.js"></script>
-<script src="1_Compare_Term_files/libs/quarto-html/popper.min.js"></script>
-<script src="1_Compare_Term_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="1_Compare_Term_files/libs/quarto-html/anchor.min.js"></script>
-<link href="1_Compare_Term_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="1_Compare_Term_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="1_Compare_Term_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="1_Compare_Term_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="1_Compare_Term_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="1_Term_comparison_files/libs/clipboard/clipboard.min.js"></script>
+<script src="1_Term_comparison_files/libs/quarto-html/quarto.js"></script>
+<script src="1_Term_comparison_files/libs/quarto-html/popper.min.js"></script>
+<script src="1_Term_comparison_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="1_Term_comparison_files/libs/quarto-html/anchor.min.js"></script>
+<link href="1_Term_comparison_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="1_Term_comparison_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="1_Term_comparison_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="1_Term_comparison_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="1_Term_comparison_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -66,15 +66,16 @@ window.Quarto = {
 
 </head>
 
-<body class="fullcontent">
+<body>
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="1_Term_comparison.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="1_Term_comparison.pdf"><i class="bi bi-file-pdf"></i>Beamer</a></li></ul></div></div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Problem</h1>
+<h1 class="title">Ist <span class="math inline">\(x^y\)</span> größer oder kleiner als <span class="math inline">\(y^x\)</span></h1>
 </div>
 
 
@@ -91,17 +92,20 @@ window.Quarto = {
 </header>
 
 
-<p><span class="math display">\[x^y \quad ? \quad y^x\]</span></p>
-<p>Lösung: <span class="math display">\[
+<p><strong>Frage:</strong> <span class="math display">\[x^y \quad ? \quad y^x\]</span></p>
+<p><strong>Lösung:</strong></p>
+<p>Lege den Definitionsbereich fest: <span class="math inline">\(x,y&gt;0\)</span></p>
+<p><span class="math display">\[
 \begin{aligned}
-&amp;&amp; x,y &amp;&gt; 0\\
 &amp;&amp; x^y &amp; \quad\square\quad  y^x \qquad |\text{ln ist stetig und str. mono. st.}\\
 \Leftrightarrow&amp;&amp; \ln(x^y) &amp; \quad\square\quad \ln(y^x)\qquad |\text{ln-Gesetze}\\
 \Leftrightarrow&amp;&amp; y \ln(x) &amp; \quad\square\quad x\ln(y)\qquad |:x, :y, x, y &gt; 0\\
 \Leftrightarrow&amp;&amp; \frac{\ln(x)}{x }&amp; \quad\square\quad \frac{\ln(y)}{y}
 \end{aligned}
 \]</span></p>
-<p>Betrachte die Funktion <span class="math inline">\(f(z)=\frac{\ln(z)}{z}\)</span></p>
+<p>Betrachte die Funktion <span class="math display">\[
+f(z)=\frac{\ln(z)}{z}
+\]</span></p>
 <p>Bestimme Maximum:<br>
 <span class="math display">\[
 \begin{aligned}
@@ -119,12 +123,19 @@ z &amp; = e
 \]</span></p></li>
 <li><p>hinr. Bed.: VZW</p></li>
 </ol>
-<p><span class="math display">\[ \text{Für }z \in (0; e) \text{ gilt } ln(z)&lt;0\]</span><br>
-<span class="math display">\[ \text{und damit}\]</span> <span class="math display">\[ \frac{1-\ln(z)}{z^2}&gt;0\]</span></p>
+<p><span class="math inline">\(\text{Für }z \in (0; e) \text{ gilt } ln(z)&lt;0 \text{ und damit } \frac{1-\ln(z)}{z^2}&gt;0\)</span></p>
 <p>Damit ist <span class="math inline">\(f\)</span> auf <span class="math inline">\(I_1=(0; e)\)</span> streng mono steigend.</p>
-<p><span class="math display">\[ \text{Für }z \in (e; \infty) \text{ gilt } ln(z)&gt;0\]</span><br>
-<span class="math display">\[ \text{und damit}\]</span> <span class="math display">\[ \frac{1-\ln(z)}{z^2}&lt;0\]</span></p>
+<p><span class="math inline">\(\text{Für }z \in (e; \infty) \text{ gilt } ln(z)&gt;0 \text{ und damit }\frac{1-\ln(z)}{z^2}&lt;0\)</span></p>
 <p>Damit ist <span class="math inline">\(f\)</span> auf <span class="math inline">\(I_2=(e; \infty)\)</span> streng mono fallend.</p>
+<div id="cell-4" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="1_Term_comparison_files/figure-html/cell-2-output-1.png" width="513" height="387" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
 <p>Conclusio:</p>
 <p>Wenn <span class="math inline">\(y&lt;x&lt;e\)</span>, dann gilt: <span class="math display">\[
 \begin{aligned}
